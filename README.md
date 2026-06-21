@@ -11,6 +11,12 @@
   <code>40 methods</code> · <code>O(1) ice classifier</code>
 </p>
 
+<p align="center">
+  <a href="https://github.com/divyamohan1993/bah2026-ps8/actions/workflows/ci.yml">
+    <img alt="CI" src="https://github.com/divyamohan1993/bah2026-ps8/actions/workflows/ci.yml/badge.svg"/>
+  </a>
+</p>
+
 ---
 
 ## The problem
@@ -63,6 +69,11 @@ python -m venv .venv
 
 # 4. (optional) run the test suite
 .venv/bin/python -m pytest -q
+
+# 5. (optional, needs network) validate on a REAL LOLA south-pole DEM —
+#    O(1) windowed read of a polar Cloud-Optimized GeoTIFF, then the genuine
+#    terrain / illumination / landing / traverse algorithms on real topography
+.venv/bin/lunaris realdata --out outputs/realdata --extent-km 120
 ```
 
 The **HTML report** lands in `outputs/faustini/` (the `outputs_dir` set in
