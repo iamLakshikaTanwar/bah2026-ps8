@@ -1,0 +1,20 @@
+# lunaris configuration for the Faustini doubly-shadowed-crater target.
+# Faustini crater: 87.3 S, 77.0 E, ~39 km diameter, floor ~ -2700 m.
+target_name: Faustini
+
+data_dir: data
+raw_dir: data/raw/faustini
+interim_dir: data/interim/faustini
+cache_dir: data/cache
+outputs_dir: outputs/faustini
+
+# Higher resolution working grid for the focused crater analysis.
+grid_size: 512
+resolution_m: 20.0
+seed: 42
+
+# Sinha et al. (2026) refined ice criterion.
+cpr_threshold: 1.0
+dop_threshold: 0.13
+
+use_synthetic: true

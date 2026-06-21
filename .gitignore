@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Testing / tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Data: raw inputs and large derived caches are NOT committed.
+# Ignore directory *contents* (note the trailing /*) so git still descends
+# into the dir and the .gitkeep negations below keep the layout placeholders.
+data/raw/*
+data/cache/
+data/interim/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+
+# Outputs: keep committable figures/reports, ignore large caches.
+outputs/cache/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
