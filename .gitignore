@@ -32,6 +32,13 @@ data/interim/*
 
 # Outputs: keep committable figures/reports, ignore large caches.
 outputs/cache/
+# Transient demo/smoke output dirs (regenerable via `lunaris demo`).
+outputs/_*/
+# Standalone interactive chart HTMLs each re-embed plotly.js (~5 MB); the
+# self-contained report.html already includes them, so don't track these.
+outputs/**/figures/cpr_dop_scatter.html
+outputs/**/figures/feature_importance.html
+outputs/**/figures/volume_hist.html
 
 # OS / editor
 .DS_Store

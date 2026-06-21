@@ -1,0 +1,100 @@
+{
+  "target": "Faustini",
+  "ingest_source": "synthetic",
+  "grid": [
+    256,
+    256
+  ],
+  "resolution_m": 20.0,
+  "seed": 42,
+  "lut_matches_rule": true,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "ice_pixels": 1446,
+  "ice_truth_pixels": 1446,
+  "rf_precision": 1.0,
+  "rf_recall": 1.0,
+  "rf_f1": 1.0,
+  "rf_cv_f1_mean": 1.0,
+  "rf_cv_f1_std": 0.0,
+  "top_feature": "temperature_max",
+  "feature_importance": [
+    [
+      "temperature_max",
+      0.2050603527078907
+    ],
+    [
+      "dop_S",
+      0.19
+    ],
+    [
+      "albedo_1064",
+      0.18638539300950793
+    ],
+    [
+      "lamp_ratio",
+      0.18001981709012832
+    ],
+    [
+      "dop_L",
+      0.15505362058540528
+    ],
+    [
+      "earth_visibility",
+      0.03991037904273882
+    ],
+    [
+      "illumination",
+      0.03491252363429244
+    ],
+    [
+      "cpr_L",
+      0.008645092518928078
+    ],
+    [
+      "cpr_S",
+      1.2801622050762533e-05
+    ],
+    [
+      "mchi_volume",
+      1.978905766770249e-08
+    ]
+  ],
+  "hurst_exponent": 0.8685859927754523,
+  "cold_trap_pixels": 1936,
+  "median_slope_deg": 55.81436430317666,
+  "landing_site": [
+    120,
+    142
+  ],
+  "landing_score": 0.6842179762173627,
+  "ahp_consistency_ratio": 0.015196485933296635,
+  "ice_access": [
+    120,
+    135
+  ],
+  "traverse_length_m": 140.0,
+  "traverse_length_km": 0.14,
+  "astar_cost": 36.43093995453039,
+  "theta_star_cost": 36.997814038130144,
+  "energy_feasible": true,
+  "dark_hours": 0.7777777777777779,
+  "min_soc": 0.9965696075830994,
+  "energy_Wh": 24.012746918303918,
+  "ice_area_m2": 578400.0,
+  "ice_fraction": 0.19742261835605127,
+  "ice_depth_m": 5.0,
+  "ice_volume_m3": 570946.2122857003,
+  "ice_mass_kg": 525270515.3028442,
+  "ice_mass_t": 525270.5153028442,
+  "ice_volume_ci_m3": [
+    195849.0939760633,
+    1076857.1164565678
+  ],
+  "ice_mass_ci_t": [
+    180181.16645797825,
+    990708.5471400423
+  ],
+  "lcross_cross_check_kg": 291513599.99999994
+}

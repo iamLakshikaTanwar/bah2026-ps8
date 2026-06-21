@@ -20,6 +20,7 @@ from .thermal import (
     ice_stability_depth,
     regolith_thermal_profile,
     sublimation_rate,
+    vapor_pressure_ice,
 )
 
 __all__ = [
@@ -35,6 +36,7 @@ __all__ = [
     "sky_view_factor",
     "cold_trap_mask",
     "sublimation_rate",
+    "vapor_pressure_ice",
     "ice_stability_depth",
     "regolith_thermal_profile",
     "detect_boulders_shadow",
