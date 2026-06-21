@@ -1,0 +1,94 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lunaris"
+version = "0.1.0"
+description = "Lunar Subsurface-Ice Detection & Mission-Planning Platform (ISRO BAH 2026 PS8)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Team lunaris" }]
+keywords = [
+    "moon",
+    "radar",
+    "polarimetry",
+    "subsurface-ice",
+    "chandrayaan-2",
+    "dfsar",
+    "mission-planning",
+    "isro",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "rasterio",
+    "scikit-image",
+    "scikit-learn",
+    "spiceypy",
+    "h3",
+    "plotly",
+    "pandas",
+    "pyyaml",
+    "pydantic>=2",
+    "pydantic-settings",
+    "typer",
+    "rich",
+    "joblib",
+    "networkx",
+    "numba",
+    "pyproj",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+lunaris = "lunaris.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/divyamohan1993/bah2026-ps8"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-ra -q"
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = [
+    "E501",  # line length handled by formatter / not enforced strictly
+    "B008",  # function call in argument defaults (typer uses this pattern)
+]
+
+[tool.ruff.lint.per-file-init]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["lunaris"]

@@ -1,0 +1,22 @@
+# lunaris runtime dependencies (mirror of pyproject.toml [project].dependencies)
+# Lunar Subsurface-Ice Detection & Mission-Planning Platform — ISRO BAH 2026 PS8.
+numpy
+scipy
+matplotlib
+rasterio
+scikit-image
+scikit-learn
+spiceypy
+h3
+plotly
+pandas
+pyyaml
+pydantic>=2
+pydantic-settings
+typer
+rich
+joblib
+networkx
+pytest
+numba
+pyproj

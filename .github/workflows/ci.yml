@@ -1,0 +1,44 @@
+name: CI
+
+# Run the deterministic OFFLINE test suite on every push to the working branch
+# and main, and on PRs into main. The real-data LOLA fetch is a CLI command
+# (`lunaris realdata`), NOT a pytest test, so CI never depends on the network.
+on:
+  push:
+    branches:
+      - claude/jolly-wright-wyzmeo
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Cancel superseded runs on the same ref to save CI minutes.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: pytest (offline)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install package (with runtime deps)
+        run: pip install -e .
+
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run offline test suite
+        run: pytest -q

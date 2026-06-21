@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Testing / tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Data: raw inputs and large derived caches are NOT committed.
+# Ignore directory *contents* (note the trailing /*) so git still descends
+# into the dir and the .gitkeep negations below keep the layout placeholders.
+data/raw/*
+data/cache/
+data/interim/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+
+# Outputs: keep committable figures/reports, ignore large caches.
+outputs/cache/
+# Transient demo/smoke output dirs (regenerable via `lunaris demo`).
+outputs/_*/
+# Standalone interactive chart HTMLs each re-embed plotly.js (~5 MB); the
+# self-contained report.html already includes them, so don't track these.
+outputs/**/figures/cpr_dop_scatter.html
+outputs/**/figures/feature_importance.html
+outputs/**/figures/volume_hist.html
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/

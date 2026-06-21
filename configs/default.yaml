@@ -1,0 +1,22 @@
+# lunaris default configuration
+# Overlaid on lunaris.config.Settings defaults by load_config().
+target_name: Faustini
+
+# Filesystem layout (relative to the repo root / CWD).
+data_dir: data
+raw_dir: data/raw
+interim_dir: data/interim
+cache_dir: data/cache
+outputs_dir: outputs
+
+# Working grid.
+grid_size: 512
+resolution_m: 20.0
+seed: 42
+
+# Subsurface-ice detection criterion (Sinha et al. 2026).
+cpr_threshold: 1.0
+dop_threshold: 0.13
+
+# Use the deterministic synthetic scene until real granules are staged.
+use_synthetic: true

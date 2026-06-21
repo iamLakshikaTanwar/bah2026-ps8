@@ -1,0 +1,59 @@
+{
+  "status": "ok",
+  "target": "Lunar South Pole (real LOLA DEM AOI)",
+  "source_label": "PGDA LOLA 80S 20mpp adjusted COG",
+  "source_url": "https://pgda.gsfc.nasa.gov/data/LOLA_20mpp/LDEM_80S_20MPP_ADJ.TIF",
+  "source_kind": "cog",
+  "native_resolution_m": 20.0,
+  "effective_resolution_m": 400.0,
+  "aoi_bounds_proj_m": [
+    -60000.0,
+    -60000.0,
+    60000.0,
+    60000.0
+  ],
+  "crs": "+proj=stere +lat_0=-90 +lon_0=0 +k=1 +x_0=0 +y_0=0 +R=1737400 +units=m +no_defs +type=crs",
+  "grid": [
+    300,
+    300
+  ],
+  "windowed_read": "O(1) windowed COG read via rasterio /vsicurl/ (overview-decimated AOI from a multi-GB global mosaic)",
+  "elev_min_m": -4371.14990234375,
+  "elev_max_m": 1947.439697265625,
+  "elev_mean_m": -974.3499919771465,
+  "elev_range_m": 6318.589599609375,
+  "slope_mean_deg": 9.911597108805978,
+  "slope_median_deg": 8.856028319071092,
+  "slope_p95_deg": 22.746993205857315,
+  "rms_roughness_mean_m": 762.3203192114008,
+  "hurst_exponent": 0.7363026865106629,
+  "psr_fraction": 0.20767777777777777,
+  "psr_pixels": 18691,
+  "sky_view_factor_mean": 0.9035696594915097,
+  "cold_trap_threshold_K": 110.0,
+  "landing_site_rc": [
+    295,
+    170
+  ],
+  "landing_score": 0.9711075422457602,
+  "ahp_consistency_ratio": 0.011475369739961577,
+  "science_target_rc": [
+    2,
+    85
+  ],
+  "traverse_length_m": 132746.0028204822,
+  "traverse_length_km": 132.74600282048218,
+  "astar_cost": 764.6183488262939,
+  "theta_star_length_m": 124183.18504463373,
+  "theta_star_cost": 850.021075314527,
+  "psr_area_m2": 2990560000.0,
+  "ice_depth_m": 5.0,
+  "psr_ice_mass_kg": 1507242240000.0,
+  "psr_ice_mass_t": 1507242240.0,
+  "psr_ice_volume_ci_m3": [
+    279729519.6420705,
+    1581422025.7726877
+  ],
+  "dfsar_note": "Real Chandrayaan-2 DFSAR L-band radar is PRADAN-login-restricted; the CPR/DOP ICE classification stage therefore stays on the synthetic DFSAR field. All terrain, illumination (horizon ray-march), landing and traverse results above are computed on the REAL LOLA DEM.",
+  "runtime_s": 99.36235356330872
+}
